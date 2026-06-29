@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://blrvkmb54y5g4"]
+
+[ext_resource type="Texture2D" uid="uid://c5kii4ki1waqg" path="res://assets/fih.png" id="1_bqj8j"]
+[ext_resource type="Script" uid="uid://dgarxswc1qcam" path="res://scripts/fysh_prototype.gd" id="1_vyssj"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_g4v7s"]
+radius = 3.0
+
+[node name="Fysh_Prototype" type="Area2D" unique_id=441396058]
+script = ExtResource("1_vyssj")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1047669423]
+texture = ExtResource("1_bqj8j")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1551522943]
+shape = SubResource("CircleShape2D_g4v7s")
+
+[connection signal="input_event" from="." to="." method="_on_input_event"]

@@ -1,19 +1,339 @@
 [gd_scene format=3 uid="uid://b3gh04lsn0l8c"]
 
+[ext_resource type="Script" uid="uid://d8r6sy5odddf" path="res://scripts/level_manager.gd" id="1_iywne"]
 [ext_resource type="Texture2D" uid="uid://bhxo8208l3iia" path="res://icon.svg" id="1_uwrxv"]
 [ext_resource type="Texture2D" uid="uid://dnbmvvrffi3ad" path="res://assets/temp_spawnable.png" id="2_lnu2h"]
 [ext_resource type="Texture2D" uid="uid://c21bvdm12nwoy" path="res://assets/temp_unspawnable.png" id="3_lbhrr"]
+[ext_resource type="Texture2D" uid="uid://b4yawbgisx7xp" path="res://assets/temp_edge.png" id="4_lbhrr"]
+[ext_resource type="PackedScene" uid="uid://blrvkmb54y5g4" path="res://scenes/fysh_prototype.tscn" id="6_p57ef"]
 
 [node name="Game" type="Node2D" unique_id=961381067]
 
+[node name="LevelManager" type="Node" parent="." unique_id=1502419204]
+unique_name_in_owner = true
+script = ExtResource("1_iywne")
+
 [node name="Icon" type="Sprite2D" parent="." unique_id=2062548987]
-position = Vector2(90, -13)
+position = Vector2(282, 95)
 texture = ExtResource("1_uwrxv")
 
 [node name="TempSpawnable" type="Sprite2D" parent="." unique_id=1424879904]
-position = Vector2(99, 74)
+position = Vector2(-207, 209)
 texture = ExtResource("2_lnu2h")
 
-[node name="TempUnspawnable" type="Sprite2D" parent="." unique_id=20252685]
-position = Vector2(82, 74)
+[node name="TempEdge" type="Sprite2D" parent="." unique_id=811656701]
+position = Vector2(-392, -208)
+texture = ExtResource("4_lbhrr")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1309838690]
+zoom = Vector2(1.5, 1.5)
+
+[node name="TempUnspawnableContainerWidth" type="Node" parent="." unique_id=2081191768]
+
+[node name="TempUnspawnable" type="Sprite2D" parent="TempUnspawnableContainerWidth" unique_id=20252685]
+position = Vector2(-376, -208)
 texture = ExtResource("3_lbhrr")
+
+[node name="TempUnspawnable2" type="Sprite2D" parent="TempUnspawnableContainerWidth" unique_id=862103482]
+position = Vector2(-360, -208)
+texture = ExtResource("3_lbhrr")
+
+[node name="TempUnspawnable3" type="Sprite2D" parent="TempUnspawnableContainerWidth" unique_id=2086458417]
+position = Vector2(-344, -208)
+texture = ExtResource("3_lbhrr")
+
+[node name="TempUnspawnable4" type="Sprite2D" parent="TempUnspawnableContainerWidth" unique_id=143383828]
+position = Vector2(-328, -208)
+texture = ExtResource("3_lbhrr")
+
+[node name="TempUnspawnable5" type="Sprite2D" parent="TempUnspawnableContainerWidth" unique_id=1207522296]
+position = Vector2(-312, -208)
+texture = ExtResource("3_lbhrr")
+
+[node name="TempUnspawnable6" type="Sprite2D" parent="TempUnspawnableContainerWidth" unique_id=1164583739]
+position = Vector2(-296, -208)
+texture = ExtResource("3_lbhrr")
+
+[node name="TempUnspawnable7" type="Sprite2D" parent="TempUnspawnableContainerWidth" unique_id=894325104]
+position = Vector2(-280, -208)
+texture = ExtResource("3_lbhrr")
+
+[node name="TempUnspawnable8" type="Sprite2D" parent="TempUnspawnableContainerWidth" unique_id=1518062509]
+position = Vector2(-264, -208)
+texture = ExtResource("3_lbhrr")
+
+[node name="TempUnspawnable9" type="Sprite2D" parent="TempUnspawnableContainerWidth" unique_id=556487545]
+position = Vector2(-248, -208)
+texture = ExtResource("3_lbhrr")
+
+[node name="TempUnspawnable10" type="Sprite2D" parent="TempUnspawnableContainerWidth" unique_id=1062921143]
+position = Vector2(-232, -208)
+texture = ExtResource("3_lbhrr")
+
+[node name="TempUnspawnable11" type="Sprite2D" parent="TempUnspawnableContainerWidth" unique_id=316142726]
+position = Vector2(-216, -208)
+texture = ExtResource("3_lbhrr")
+
+[node name="TempUnspawnable12" type="Sprite2D" parent="TempUnspawnableContainerWidth" unique_id=1580520488]
+position = Vector2(-200, -208)
+texture = ExtResource("3_lbhrr")
+
+[node name="TempUnspawnable13" type="Sprite2D" parent="TempUnspawnableContainerWidth" unique_id=531526879]
+position = Vector2(-184, -208)
+texture = ExtResource("3_lbhrr")
+
+[node name="TempUnspawnable14" type="Sprite2D" parent="TempUnspawnableContainerWidth" unique_id=1638507255]
+position = Vector2(-168, -208)
+texture = ExtResource("3_lbhrr")
+
+[node name="TempUnspawnable15" type="Sprite2D" parent="TempUnspawnableContainerWidth" unique_id=2082773515]
+position = Vector2(-152, -208)
+texture = ExtResource("3_lbhrr")
+
+[node name="TempUnspawnable16" type="Sprite2D" parent="TempUnspawnableContainerWidth" unique_id=289665210]
+position = Vector2(-136, -208)
+texture = ExtResource("3_lbhrr")
+
+[node name="TempUnspawnable17" type="Sprite2D" parent="TempUnspawnableContainerWidth" unique_id=1728885328]
+position = Vector2(-120, -208)
+texture = ExtResource("3_lbhrr")
+
+[node name="TempUnspawnable18" type="Sprite2D" parent="TempUnspawnableContainerWidth" unique_id=2080784881]
+position = Vector2(-104, -208)
+texture = ExtResource("3_lbhrr")
+
+[node name="TempUnspawnable19" type="Sprite2D" parent="TempUnspawnableContainerWidth" unique_id=1794765747]
+position = Vector2(-88, -208)
+texture = ExtResource("3_lbhrr")
+
+[node name="TempUnspawnable20" type="Sprite2D" parent="TempUnspawnableContainerWidth" unique_id=265053338]
+position = Vector2(-72, -208)
+texture = ExtResource("3_lbhrr")
+
+[node name="TempUnspawnable21" type="Sprite2D" parent="TempUnspawnableContainerWidth" unique_id=201159434]
+position = Vector2(-56, -208)
+texture = ExtResource("3_lbhrr")
+
+[node name="TempUnspawnable22" type="Sprite2D" parent="TempUnspawnableContainerWidth" unique_id=1767361847]
+position = Vector2(-40, -208)
+texture = ExtResource("3_lbhrr")
+
+[node name="TempUnspawnable23" type="Sprite2D" parent="TempUnspawnableContainerWidth" unique_id=1462288364]
+position = Vector2(-24, -208)
+texture = ExtResource("3_lbhrr")
+
+[node name="TempUnspawnable24" type="Sprite2D" parent="TempUnspawnableContainerWidth" unique_id=1127677848]
+position = Vector2(-8, -208)
+texture = ExtResource("3_lbhrr")
+
+[node name="TempUnspawnable25" type="Sprite2D" parent="TempUnspawnableContainerWidth" unique_id=1674191376]
+position = Vector2(8, -208)
+texture = ExtResource("3_lbhrr")
+
+[node name="TempUnspawnable26" type="Sprite2D" parent="TempUnspawnableContainerWidth" unique_id=2104453125]
+position = Vector2(24, -208)
+texture = ExtResource("3_lbhrr")
+
+[node name="TempUnspawnable27" type="Sprite2D" parent="TempUnspawnableContainerWidth" unique_id=2122259043]
+position = Vector2(40, -208)
+texture = ExtResource("3_lbhrr")
+
+[node name="TempUnspawnable28" type="Sprite2D" parent="TempUnspawnableContainerWidth" unique_id=1429166047]
+position = Vector2(56, -208)
+texture = ExtResource("3_lbhrr")
+
+[node name="TempUnspawnable29" type="Sprite2D" parent="TempUnspawnableContainerWidth" unique_id=2026114426]
+position = Vector2(72, -208)
+texture = ExtResource("3_lbhrr")
+
+[node name="TempUnspawnable30" type="Sprite2D" parent="TempUnspawnableContainerWidth" unique_id=22782541]
+position = Vector2(88, -208)
+texture = ExtResource("3_lbhrr")
+
+[node name="TempUnspawnable31" type="Sprite2D" parent="TempUnspawnableContainerWidth" unique_id=1061721404]
+position = Vector2(104, -208)
+texture = ExtResource("3_lbhrr")
+
+[node name="TempUnspawnable32" type="Sprite2D" parent="TempUnspawnableContainerWidth" unique_id=934023701]
+position = Vector2(120, -208)
+texture = ExtResource("3_lbhrr")
+
+[node name="TempUnspawnable33" type="Sprite2D" parent="TempUnspawnableContainerWidth" unique_id=1586659425]
+position = Vector2(136, -208)
+texture = ExtResource("3_lbhrr")
+
+[node name="TempUnspawnable34" type="Sprite2D" parent="TempUnspawnableContainerWidth" unique_id=2124401457]
+position = Vector2(152, -208)
+texture = ExtResource("3_lbhrr")
+
+[node name="TempUnspawnable35" type="Sprite2D" parent="TempUnspawnableContainerWidth" unique_id=1992730479]
+position = Vector2(168, -208)
+texture = ExtResource("3_lbhrr")
+
+[node name="TempUnspawnable36" type="Sprite2D" parent="TempUnspawnableContainerWidth" unique_id=1144823619]
+position = Vector2(184, -208)
+texture = ExtResource("3_lbhrr")
+
+[node name="TempUnspawnable37" type="Sprite2D" parent="TempUnspawnableContainerWidth" unique_id=1531799377]
+position = Vector2(200, -208)
+texture = ExtResource("3_lbhrr")
+
+[node name="TempUnspawnable38" type="Sprite2D" parent="TempUnspawnableContainerWidth" unique_id=549160553]
+position = Vector2(216, -208)
+texture = ExtResource("3_lbhrr")
+
+[node name="TempUnspawnable39" type="Sprite2D" parent="TempUnspawnableContainerWidth" unique_id=1818143124]
+position = Vector2(232, -208)
+texture = ExtResource("3_lbhrr")
+
+[node name="TempUnspawnable40" type="Sprite2D" parent="TempUnspawnableContainerWidth" unique_id=2034871710]
+position = Vector2(248, -208)
+texture = ExtResource("3_lbhrr")
+
+[node name="TempUnspawnable41" type="Sprite2D" parent="TempUnspawnableContainerWidth" unique_id=103629623]
+position = Vector2(264, -208)
+texture = ExtResource("3_lbhrr")
+
+[node name="TempUnspawnable42" type="Sprite2D" parent="TempUnspawnableContainerWidth" unique_id=791138801]
+position = Vector2(280, -208)
+texture = ExtResource("3_lbhrr")
+
+[node name="TempUnspawnable43" type="Sprite2D" parent="TempUnspawnableContainerWidth" unique_id=1062056842]
+position = Vector2(296, -208)
+texture = ExtResource("3_lbhrr")
+
+[node name="TempUnspawnable44" type="Sprite2D" parent="TempUnspawnableContainerWidth" unique_id=1256230233]
+position = Vector2(312, -208)
+texture = ExtResource("3_lbhrr")
+
+[node name="TempUnspawnable45" type="Sprite2D" parent="TempUnspawnableContainerWidth" unique_id=2079779244]
+position = Vector2(328, -208)
+texture = ExtResource("3_lbhrr")
+
+[node name="TempUnspawnable46" type="Sprite2D" parent="TempUnspawnableContainerWidth" unique_id=1503799534]
+position = Vector2(344, -208)
+texture = ExtResource("3_lbhrr")
+
+[node name="TempUnspawnable47" type="Sprite2D" parent="TempUnspawnableContainerWidth" unique_id=869961970]
+position = Vector2(360, -208)
+texture = ExtResource("3_lbhrr")
+
+[node name="TempUnspawnable48" type="Sprite2D" parent="TempUnspawnableContainerWidth" unique_id=1122000129]
+position = Vector2(376, -208)
+texture = ExtResource("3_lbhrr")
+
+[node name="TempEdge2" type="Sprite2D" parent="." unique_id=937423617]
+position = Vector2(-376, -224)
+texture = ExtResource("4_lbhrr")
+
+[node name="TempUnspawnableContainerHeight" type="Node" parent="." unique_id=2096579293]
+
+[node name="TempUnspawnable" type="Sprite2D" parent="TempUnspawnableContainerHeight" unique_id=1976707952]
+position = Vector2(-376, -192)
+texture = ExtResource("3_lbhrr")
+
+[node name="TempUnspawnable2" type="Sprite2D" parent="TempUnspawnableContainerHeight" unique_id=417424095]
+position = Vector2(-376, -176)
+texture = ExtResource("3_lbhrr")
+
+[node name="TempUnspawnable3" type="Sprite2D" parent="TempUnspawnableContainerHeight" unique_id=2043645145]
+position = Vector2(-376, -160)
+texture = ExtResource("3_lbhrr")
+
+[node name="TempUnspawnable4" type="Sprite2D" parent="TempUnspawnableContainerHeight" unique_id=1293438403]
+position = Vector2(-376, -144)
+texture = ExtResource("3_lbhrr")
+
+[node name="TempUnspawnable5" type="Sprite2D" parent="TempUnspawnableContainerHeight" unique_id=1598984305]
+position = Vector2(-376, -128)
+texture = ExtResource("3_lbhrr")
+
+[node name="TempUnspawnable6" type="Sprite2D" parent="TempUnspawnableContainerHeight" unique_id=1995723085]
+position = Vector2(-376, -112)
+texture = ExtResource("3_lbhrr")
+
+[node name="TempUnspawnable7" type="Sprite2D" parent="TempUnspawnableContainerHeight" unique_id=1349329232]
+position = Vector2(-376, -96)
+texture = ExtResource("3_lbhrr")
+
+[node name="TempUnspawnable8" type="Sprite2D" parent="TempUnspawnableContainerHeight" unique_id=32973465]
+position = Vector2(-376, -80)
+texture = ExtResource("3_lbhrr")
+
+[node name="TempUnspawnable9" type="Sprite2D" parent="TempUnspawnableContainerHeight" unique_id=531385352]
+position = Vector2(-376, -64)
+texture = ExtResource("3_lbhrr")
+
+[node name="TempUnspawnable10" type="Sprite2D" parent="TempUnspawnableContainerHeight" unique_id=1574699274]
+position = Vector2(-376, -48)
+texture = ExtResource("3_lbhrr")
+
+[node name="TempUnspawnable11" type="Sprite2D" parent="TempUnspawnableContainerHeight" unique_id=623805548]
+position = Vector2(-376, -32)
+texture = ExtResource("3_lbhrr")
+
+[node name="TempUnspawnable12" type="Sprite2D" parent="TempUnspawnableContainerHeight" unique_id=1052066147]
+position = Vector2(-376, -16)
+texture = ExtResource("3_lbhrr")
+
+[node name="TempUnspawnable13" type="Sprite2D" parent="TempUnspawnableContainerHeight" unique_id=553444352]
+position = Vector2(-376, 0)
+texture = ExtResource("3_lbhrr")
+
+[node name="TempUnspawnable14" type="Sprite2D" parent="TempUnspawnableContainerHeight" unique_id=1564551931]
+position = Vector2(-376, 16)
+texture = ExtResource("3_lbhrr")
+
+[node name="TempUnspawnable15" type="Sprite2D" parent="TempUnspawnableContainerHeight" unique_id=224764000]
+position = Vector2(-376, 32)
+texture = ExtResource("3_lbhrr")
+
+[node name="TempUnspawnable16" type="Sprite2D" parent="TempUnspawnableContainerHeight" unique_id=1746521262]
+position = Vector2(-376, 48)
+texture = ExtResource("3_lbhrr")
+
+[node name="TempUnspawnable17" type="Sprite2D" parent="TempUnspawnableContainerHeight" unique_id=34071231]
+position = Vector2(-376, 64)
+texture = ExtResource("3_lbhrr")
+
+[node name="TempUnspawnable18" type="Sprite2D" parent="TempUnspawnableContainerHeight" unique_id=418096911]
+position = Vector2(-376, 80)
+texture = ExtResource("3_lbhrr")
+
+[node name="TempUnspawnable19" type="Sprite2D" parent="TempUnspawnableContainerHeight" unique_id=1568650639]
+position = Vector2(-376, 96)
+texture = ExtResource("3_lbhrr")
+
+[node name="TempUnspawnable20" type="Sprite2D" parent="TempUnspawnableContainerHeight" unique_id=1262605278]
+position = Vector2(-376, 112)
+texture = ExtResource("3_lbhrr")
+
+[node name="TempUnspawnable21" type="Sprite2D" parent="TempUnspawnableContainerHeight" unique_id=269047030]
+position = Vector2(-376, 128)
+texture = ExtResource("3_lbhrr")
+
+[node name="TempUnspawnable22" type="Sprite2D" parent="TempUnspawnableContainerHeight" unique_id=1191047894]
+position = Vector2(-376, 144)
+texture = ExtResource("3_lbhrr")
+
+[node name="TempUnspawnable23" type="Sprite2D" parent="TempUnspawnableContainerHeight" unique_id=447968673]
+position = Vector2(-376, 160)
+texture = ExtResource("3_lbhrr")
+
+[node name="TempUnspawnable24" type="Sprite2D" parent="TempUnspawnableContainerHeight" unique_id=1508973299]
+position = Vector2(-376, 176)
+texture = ExtResource("3_lbhrr")
+
+[node name="TempUnspawnable25" type="Sprite2D" parent="TempUnspawnableContainerHeight" unique_id=2053797389]
+position = Vector2(-376, 192)
+texture = ExtResource("3_lbhrr")
+
+[node name="TempUnspawnable26" type="Sprite2D" parent="TempUnspawnableContainerHeight" unique_id=1838702242]
+position = Vector2(-376, 208)
+texture = ExtResource("3_lbhrr")
+
+[node name="Fysh_Prototype" parent="." unique_id=441396058 instance=ExtResource("6_p57ef")]
+position = Vector2(-165, 56)
+
+[node name="Fysh_Prototype2" parent="." unique_id=630238990 instance=ExtResource("6_p57ef")]
+position = Vector2(-143, 56)
