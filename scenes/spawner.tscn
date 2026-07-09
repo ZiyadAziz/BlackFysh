@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://csb5allwih0ls"]
+
+[ext_resource type="Script" uid="uid://btsleq7icsfxr" path="res://scripts/spawner.gd" id="1_2vbf6"]
+[ext_resource type="PackedScene" uid="uid://blrvkmb54y5g4" path="res://scenes/fysh_prototype.tscn" id="2_ik2nu"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_g4v7s"]
+size = Vector2(104, 94)
+
+[node name="spawner" type="Area2D" unique_id=657544024]
+script = ExtResource("1_2vbf6")
+fysh_to_spawn = ExtResource("2_ik2nu")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=953576752]
+shape = SubResource("RectangleShape2D_g4v7s")
+disabled = true
+
+[node name="Timer" type="Timer" parent="." unique_id=2068424294]
+autostart = true
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

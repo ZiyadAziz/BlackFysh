@@ -1,6 +1,7 @@
 extends Area2D
 
-@onready var level_manager: Node = %LevelManager
+#@onready var level_manager: Node = %LevelManager
+@onready var level_manager = get_node("/root/Game/LevelManager")
 
 #Not sure if this is the best method of "catching" a fysh since the cursor is going to be the tool too
 func _on_input_event(viewport: Node, event: InputEvent, shape_idx: int) -> void:

@@ -6,6 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://c21bvdm12nwoy" path="res://assets/temp_unspawnable.png" id="3_lbhrr"]
 [ext_resource type="Texture2D" uid="uid://b4yawbgisx7xp" path="res://assets/temp_edge.png" id="4_lbhrr"]
 [ext_resource type="PackedScene" uid="uid://blrvkmb54y5g4" path="res://scenes/fysh_prototype.tscn" id="6_p57ef"]
+[ext_resource type="PackedScene" uid="uid://csb5allwih0ls" path="res://scenes/spawner.tscn" id="7_u5sy4"]
 
 [node name="Game" type="Node2D" unique_id=961381067]
 
@@ -336,4 +337,7 @@ texture = ExtResource("3_lbhrr")
 position = Vector2(-165, 56)
 
 [node name="Fysh_Prototype2" parent="." unique_id=630238990 instance=ExtResource("6_p57ef")]
-position = Vector2(-143, 56)
+position = Vector2(-127, 38)
+
+[node name="spawner" parent="." unique_id=657544024 instance=ExtResource("7_u5sy4")]
+position = Vector2(-156, -83)
