@@ -13,6 +13,9 @@ var direction = 1 #We want to change the direction when the fysh collides with t
 func _on_input_event(viewport: Node, event: InputEvent, shape_idx: int) -> void:
 	if event is InputEventMouseButton and event.pressed and event.button_index == MOUSE_BUTTON_LEFT:
 		#Here I would call the minigame event as well
+		#After the minigame I would either have the fish catch screen
+		# or fish getting away screen
+		
 		#Since this is the prototype, this would be how the speargun works, 
 		#but since theres gonna be multiple tools idk if the script should be on the fysh itself or its own seperate thing
 		level_manager.add_point()
