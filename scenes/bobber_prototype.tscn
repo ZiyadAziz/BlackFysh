@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://dkg6kc26w2xxg"]
+
+[ext_resource type="Script" uid="uid://ccjltykvjby2c" path="res://scripts/bobber_prototype.gd" id="1_haeio"]
+[ext_resource type="Texture2D" uid="uid://cjlj55siflux5" path="res://assets/bobber.png" id="1_oq2dr"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_g4v7s"]
+radius = 6.0
+
+[node name="bobber_prototype" type="Area2D" unique_id=613765093]
+script = ExtResource("1_haeio")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=529275688]
+texture = ExtResource("1_oq2dr")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=930578438]
+shape = SubResource("CircleShape2D_g4v7s")
