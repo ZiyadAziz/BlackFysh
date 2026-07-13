@@ -2,6 +2,7 @@ extends Area2D
 
 #This gives the spawner a fysh variable that I can put a scene into in the spawner inspector
 @export var fysh_to_spawn: PackedScene 
+@export var bobber_to_spawn: PackedScene 
 @onready var game = get_node("/root/Game")
 @onready var level_manager: Node = %LevelManager
 
@@ -14,6 +15,30 @@ func _ready() -> void:
 	#spawn_fysh()
 	pass
 
+func _on_timer_timeout() -> void:
+	if level_manager.fysh_count < level_manager.max_fysh:
+		##LOOK MORE INTO HOW THESE LINES OF CODE WORKS, FOR KNOWLEDGE SAKE
+		var shape = collision_shape_2d.shape as RectangleShape2D
+		var size = shape.extents
+		var origin = collision_shape_2d.global_position
+		
+		var random_x = randf_range(origin.x - size.x, origin.x + size.x)
+		var random_y = randf_range(origin.y - size.y, origin.y + size.y)
+	
+		var fysh = fysh_to_spawn.instantiate()
+		#Fysh might need to declare global_position as a variable
+		fysh.global_position = Vector2(random_x, random_y) 
+		get_parent().add_child(fysh)
+		level_manager.fysh_spawned()
+		
+#Clicking on the spawnable area allows a bobber to be spawned in
+func _on_input_event(viewport: Node, event: InputEvent, shape_idx: int) -> void: #dont know if i need any of these parameters 
+	if event is InputEventMouseButton and event.pressed and event.button_index == MOUSE_BUTTON_LEFT:
+		if level_manager.current_tool == level_manager.Tools.FYSHINGROD and level_manager.bobber_out == false:
+			var bobber = bobber_to_spawn.instantiate()
+			bobber.global_position = get_global_mouse_position() #This is supposedly the way to get the mouses's current position
+			get_parent().add_child(bobber)
+			level_manager.bobber_out = true
 
 ##On the asteroid game, I just have a timer for the spawner to start spawning
 ##This might not be the best solution since in the full game, I wouldn't want fysh
@@ -44,20 +69,3 @@ func _ready() -> void:
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 #func _process(delta: float) -> void:
 	#pass
-
-
-func _on_timer_timeout() -> void:
-	if level_manager.fysh_count < level_manager.max_fysh:
-		##LOOK MORE INTO HOW THESE LINES OF CODE WORKS, FOR KNOWLEDGE SAKE
-		var shape = collision_shape_2d.shape as RectangleShape2D
-		var size = shape.extents
-		var origin = collision_shape_2d.global_position
-		
-		var random_x = randf_range(origin.x - size.x, origin.x + size.x)
-		var random_y = randf_range(origin.y - size.y, origin.y + size.y)
-	
-		var fysh = fysh_to_spawn.instantiate()
-		#Fysh might need to declare global_position as a variable
-		fysh.global_position = Vector2(random_x, random_y) 
-		get_parent().add_child(fysh)
-		level_manager.fysh_spawned()

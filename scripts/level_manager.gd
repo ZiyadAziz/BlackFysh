@@ -6,7 +6,7 @@ var fysh_count := 0
 
 #This will be useful later, current tool is a speargun for now since I need to implement da rod
 enum Tools {FYSHINGROD, NET, SPEARGUN}
-var current_tool = Tools.SPEARGUN 
+var current_tool = Tools.FYSHINGROD 
 var bobber_out = false
 
 func fysh_spawned():
