@@ -8,6 +8,10 @@
 [ext_resource type="PackedScene" uid="uid://blrvkmb54y5g4" path="res://scenes/fysh_prototype.tscn" id="6_p57ef"]
 [ext_resource type="PackedScene" uid="uid://csb5allwih0ls" path="res://scenes/spawner.tscn" id="7_u5sy4"]
 
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_yf5fn"]
+normal = Vector2(-1, 0)
+distance = 49.0
+
 [node name="Game" type="Node2D" unique_id=961381067]
 
 [node name="LevelManager" type="Node" parent="." unique_id=1502419204]
@@ -341,3 +345,8 @@ position = Vector2(-127, 38)
 
 [node name="spawner" parent="." unique_id=657544024 instance=ExtResource("7_u5sy4")]
 position = Vector2(-156, -83)
+
+[node name="temp_world_boundry" type="StaticBody2D" parent="." unique_id=1854580575]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="temp_world_boundry" unique_id=1450466887]
+shape = SubResource("WorldBoundaryShape2D_yf5fn")

@@ -5,6 +5,7 @@ extends CharacterBody2D
 
 #The vision cone for the fysh might either be a raycast or area2d (currently using area2d)
 # or a secret third thing that a youtube video tells me
+@onready var collision_shape_2d: CollisionShape2D = $vision/CollisionShape2D
 
 var SPEED := 50.0
 var speed_mult = 1
