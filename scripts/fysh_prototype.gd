@@ -2,10 +2,11 @@ extends CharacterBody2D
 
 #@onready var level_manager: Node = %LevelManager
 @onready var level_manager = get_node("/root/Game/LevelManager")
+@onready var minigame_prototype = get_node("/root/Game/minigame_prototype")
 
 #The vision cone for the fysh might either be a raycast or area2d (currently using area2d)
 # or a secret third thing that a youtube video tells me
-@onready var collision_shape_2d: CollisionShape2D = $vision/CollisionShape2D
+@onready var collision_shape_2d: CollisionShape2D = $CollisionShape2D
 
 var SPEED := 50.0
 var speed_mult = 1
@@ -20,7 +21,18 @@ func _on_input_event(viewport: Node, event: InputEvent, shape_idx: int) -> void:
 		#After the minigame I would either have the fish catch screen
 		# or fish getting away screen
 		
-		level_manager.add_point()
+		#In the future this would be changed to be the minigame itself
+		# need to actually make the minigame, but I think the minigame
+		# somehow needs to return a true or false, and based on that
+		# a menu would pop up with the fysh you caught or with a fail
+		# message
+		
+		#When the minigame is occuring, I need to disable the tool so that I dont
+		# click on anything aside from interacting with the minigame
+		# (this could either be done by having like a minigame tool or disabling
+		# the capability of the fysh to be interacted with; I think the first solution
+		# might be easier by just having a tool called MINIGAME or something) 
+		minigame_prototype.show()
 		queue_free()
 
 func _process(delta: float) -> void:
@@ -34,5 +46,6 @@ func _process(delta: float) -> void:
 	# requires editing rotation (look at space loop for that), the rotation should be randomized on ready
 	
 	if current_state == State.IDLE: 
-		position.x += SPEED * delta * direction
+		pass
+		#position.x += SPEED * delta * direction
 	pass

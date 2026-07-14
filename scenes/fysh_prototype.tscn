@@ -10,6 +10,7 @@ radius = 3.0
 size = Vector2(10, 6)
 
 [node name="Fysh_Prototype" type="CharacterBody2D" unique_id=153737823]
+input_pickable = true
 script = ExtResource("1_vyssj")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1047669423]

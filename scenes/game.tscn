@@ -7,6 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://b4yawbgisx7xp" path="res://assets/temp_edge.png" id="4_lbhrr"]
 [ext_resource type="PackedScene" uid="uid://blrvkmb54y5g4" path="res://scenes/fysh_prototype.tscn" id="6_p57ef"]
 [ext_resource type="PackedScene" uid="uid://csb5allwih0ls" path="res://scenes/spawner.tscn" id="7_u5sy4"]
+[ext_resource type="PackedScene" uid="uid://dxpjankv6wfk5" path="res://scenes/minigame_prototype.tscn" id="8_gee14"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_yf5fn"]
 normal = Vector2(-1, 0)
@@ -338,7 +339,7 @@ position = Vector2(-376, 208)
 texture = ExtResource("3_lbhrr")
 
 [node name="Fysh_Prototype" parent="." unique_id=441396058 instance=ExtResource("6_p57ef")]
-position = Vector2(-165, 56)
+position = Vector2(-238, 162)
 
 [node name="Fysh_Prototype2" parent="." unique_id=630238990 instance=ExtResource("6_p57ef")]
 position = Vector2(-127, 38)
@@ -350,3 +351,6 @@ position = Vector2(-156, -83)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="temp_world_boundry" unique_id=1450466887]
 shape = SubResource("WorldBoundaryShape2D_yf5fn")
+
+[node name="minigame_prototype" parent="." unique_id=517266032 instance=ExtResource("8_gee14")]
+position = Vector2(1, 1)
